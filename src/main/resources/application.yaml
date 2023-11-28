@@ -10,7 +10,13 @@ spring:
     console:
       enabled: true
   datasource:
-    url: jdbc:h2:mem:webauthndemodb
+    url: jdbc:mysql://localhost:3306/webauthn
+    username: root
+    password: mysql
+    #url: jdbc:h2:mem:webauthndemodb
+  jpa:
+    hibernate:
+       ddl-auto: none   #used create  for 1st startup to create DDL for mysql.
   web:
     resources:
       static-locations: classpath:/META-INF/resources/webauthn
